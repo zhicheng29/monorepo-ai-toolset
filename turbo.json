@@ -1,15 +1,46 @@
 {
-  "$schema": "https://turbo.build/schema.json",
-  "tasks": {
-    "build": {
-      "dependsOn": ["^build"],
-      "inputs": ["$TURBO_DEFAULT$", ".env*"],
-      "outputs": ["dist/**"]
-    },
-    "lint": {},
-    "dev": {
-      "cache": false,
-      "persistent": true
-    }
-  }
+	"$schema": "https://turbo.build/schema.json",
+	"globalEnv": [".env"],
+	"tasks": {
+		"chat-bot#dev": {
+			"dependsOn": ["@repo/viteconfig#build"],
+			"cache": false,
+			"persistent": true,
+			"env": [".env.development.local", ".env.development", ".env.local", ".env"]
+		},
+		"chat-bot#build": {
+			"dependsOn": ["@repo/viteconfig#build"],
+			"outputs": ["dist/**"],
+			"env": [".env.development.local", ".env.development", ".env.local", ".env"]
+		},
+		"flow-config#dev": {
+			"dependsOn": ["@repo/viteconfig#build"],
+			"cache": false,
+			"persistent": true,
+			"env": [".env.development.local", ".env.development", ".env.local", ".env"]
+		},
+		"flow-config#build": {
+			"dependsOn": ["@repo/viteconfig#build"],
+			"outputs": ["dist/**"],
+			"env": [".env.development.local", ".env.development", ".env.local", ".env"]
+		},
+		"dev": {
+			"cache": false,
+			"persistent": true,
+			"env": [".env.development.local", ".env.development", ".env.local", ".env"]
+		},
+		"build": {
+			"dependsOn": ["^build"],
+			"outputs": ["dist/**"],
+			"env": [".env.production.local", ".env.production", ".env.local", ".env"]
+		},
+		"test": {
+			"dependsOn": ["^test"],
+			"outputs": ["dist/**"],
+			"env": [".env.test.local", ".env.test", ".env.local", ".env"]
+		},
+		"lint": {
+			"dependsOn": []
+		}
+	}
 }
