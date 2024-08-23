@@ -1,9 +1,9 @@
-import { ButtonComponent } from "@repo/ui";
+import Home from "@/views/home";
 
 const App: React.FC = () => {
   return (
     <>
-      <ButtonComponent></ButtonComponent>
+      <Home />
     </>
   );
 };

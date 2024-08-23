@@ -59,6 +59,9 @@
     "Prefixs",
     "breakline",
     "stylelint",
-    "styl"
+    "styl",
+    "tailwindcss",
+    "Chatting",
+    "iconfont"
   ]
 }
