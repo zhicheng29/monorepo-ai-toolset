@@ -17,7 +17,9 @@ const HomeHeader: React.FC = () => {
       </div>
       <div className="flex items-center space-x-8">
         <div className="space-x-4 md:space-x-8 md:text-lg">
-          <span className="cursor-pointer hover:opacity-50">Docs</span>
+          <Button type="text" className="cursor-pointer">
+            Docs
+          </Button>
         </div>
         <div className="flex space-x-4">
           <Button className="font-bold" onClick={toLogin}>

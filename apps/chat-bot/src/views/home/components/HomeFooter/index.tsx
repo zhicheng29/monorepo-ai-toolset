@@ -1,8 +1,10 @@
+import { Button } from "antd";
+
 const HomeFooter: React.FC = () => {
   return (
     <div className="flex items-center justify-between">
       <div className="flex items-center space-x-2">
-        <i className="iconfont icon-moon cursor-pointer text-3xl hover:opacity-50"></i>
+        <Button type="text" size="large" icon={<i className="iconfont icon-moon text-3xl hover:opacity-50" />} />
       </div>
       <div className="text-center">
         <div className="text-lg">
@@ -11,7 +13,7 @@ const HomeFooter: React.FC = () => {
         </div>
       </div>
       <div className="flex space-x-3">
-        <i className="iconfont icon-github cursor-pointer text-3xl hover:opacity-50"></i>
+        <Button type="text" size="large" icon={<i className="iconfont icon-github text-3xl hover:opacity-50" />} />
       </div>
     </div>
   );

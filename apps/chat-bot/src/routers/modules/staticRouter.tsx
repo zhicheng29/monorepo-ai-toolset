@@ -1,6 +1,7 @@
 import Login from "@/views/login/index";
 import Home from "@/views/home/index";
-import { HOME_URL, LOGIN_URL } from "@/constants/pageUrl";
+import Chat from "@/views/chat/index";
+import { HOME_URL, LOGIN_URL, CHAT_URL } from "@/constants/pageUrl";
 
 import type { RouteObjectType } from "@/routers/interface";
 
@@ -11,9 +12,10 @@ export const staticRouter: RouteObjectType[] = [
   },
   {
     path: LOGIN_URL,
-    element: <Login />,
-    meta: {
-      title: "登录"
-    }
+    element: <Login />
+  },
+  {
+    path: CHAT_URL,
+    element: <Chat />
   }
 ];

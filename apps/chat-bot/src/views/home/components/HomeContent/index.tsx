@@ -1,12 +1,16 @@
 import React, { useState, useEffect } from "react";
-
+import { useNavigate } from "react-router-dom";
 import { Button } from "antd";
 
 import { points } from "@/constants/botPoint";
+import { CHAT_URL } from "@/constants/pageUrl";
 
 const HomeContent: React.FC = () => {
+  const navigator = useNavigate();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [fade, setFade] = useState(true);
+
+  const toChat = () => navigator(CHAT_URL);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -33,11 +37,12 @@ const HomeContent: React.FC = () => {
       </div>
       <div className="mt-5 space-y-2 md:mt-6 md:space-x-4 md:space-y-0">
         <Button
-          type="primary"
           size="large"
-          icon={<i className="iconfont icon-right-arrow icon-for-reversal"></i>}
+          type="primary"
           iconPosition="end"
           className="font-bold"
+          onClick={toChat}
+          icon={<i className="iconfont icon-right-arrow" />}
         >
           Start Chatting
         </Button>
