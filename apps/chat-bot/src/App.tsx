@@ -1,9 +1,9 @@
-import Home from "@/views/home";
+import RouterProvider from "@/routers";
 
 const App: React.FC = () => {
   return (
     <>
-      <Home />
+      <RouterProvider />
     </>
   );
 };
