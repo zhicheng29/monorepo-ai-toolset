@@ -6,7 +6,7 @@ const ChatContent: React.FC = () => {
   const title = import.meta.env.VITE_GLOB_APP_TITLE;
 
   return (
-    <div className="flex items-center justify-center h-full px-4 pt-4 h-[calc(100%-8rem)] overflow-y-auto overflow-x-hidden">
+    <div className="flex items-center justify-center px-4 pt-4 h-[calc(100%-8rem)] overflow-y-auto overflow-x-hidden">
       <div></div>
       <div className="flex justify-center w-2/3">
         <Link to={HOME_URL} target="_blank">

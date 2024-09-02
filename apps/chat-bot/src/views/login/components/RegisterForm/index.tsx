@@ -8,19 +8,20 @@ interface RegisterFormProps {
 const RegisterForm: React.FC<RegisterFormProps> = ({ setIsLogin }) => {
   const onFinish = (values: any) => {
     console.log("Received values of form: ", values);
+    toLogin();
   };
 
   const toLogin = () => setIsLogin(true);
 
   return (
     <Form onFinish={onFinish}>
-      <Form.Item name="username">
+      <Form.Item name="username" rules={[{ required: true }]}>
         <Input placeholder="邮箱/手机号" />
       </Form.Item>
       <Form.Item>
         <Row gutter={8}>
           <Col span={17}>
-            <Form.Item name="captcha" noStyle rules={[{ required: true, message: "Please input the captcha you got!" }]}>
+            <Form.Item name="captcha" noStyle rules={[{ required: true }]}>
               <Input placeholder="验证码" />
             </Form.Item>
           </Col>
@@ -38,8 +39,7 @@ const RegisterForm: React.FC<RegisterFormProps> = ({ setIsLogin }) => {
         hasFeedback
         rules={[
           {
-            required: true,
-            message: "Please confirm your password!"
+            required: true
           },
           ({ getFieldValue }) => ({
             validator(_, value) {
@@ -70,7 +70,7 @@ const RegisterForm: React.FC<RegisterFormProps> = ({ setIsLogin }) => {
       </Form.Item>
       <Form.Item className="flex justify-end">
         <Button type="link" className="p-1" onClick={toLogin}>
-          已有账号，去注册
+          已有账号，去登录
         </Button>
       </Form.Item>
     </Form>

@@ -1,18 +1,36 @@
-import bgURl from "@/assets/images/bg.svg";
+import { useState } from "react";
+
+import SvgIcon from "@repo/ui/components/SvgIcon";
+import LoginHeader from "./components/LoginHeader";
+import FormHeader from "./components/FormHeader";
+import LoginForm from "./components/LoginForm";
+import RegisterForm from "./components/RegisterForm";
+
+import LoginBg from "@/assets/images/login_bg.png";
 
 const Login: React.FC = () => {
+  const [isLogin, setIsLogin] = useState(true);
+
   return (
-    <div className="h-dvh">
-      <div className="flex items-center justify-center">
-        <div className="left-bg"></div>
-        <div className="header"></div>
-        <div className="flex w-full h-full mx-auto">
-          <div className="basis-1/3">
-            <img src={bgURl} />
-          </div>
-          <div className="basis-1/3"></div>
+    <div className="h-dvh flex flex-1 items-center justify-center">
+      <img src={LoginBg} className="fixed bottom-0 left-0 w-4/5 z-[-1]"></img>
+      <div className="absolute grid grid-cols-2 gap-4 top-3 right-12">
+        <LoginHeader />
+      </div>
+      <div className="w-full h-full grid grid-cols-2 gap-72 px-40">
+        <div className="flex items-center justify-end">
+          <SvgIcon name="login_container_bg" iconStyle={{ width: "80%", height: "100%" }} />
         </div>
-        <div className="copyright"></div>
+        <div className="flex items-center">
+          <div className="w-[32rem] py-10 px-20 min-w-80 rounded-3xl shadow-[0_0px_5px_1px_rgba(0,0,0,0.1)]">
+            <FormHeader />
+            {isLogin ? <LoginForm setIsLogin={setIsLogin} /> : <RegisterForm setIsLogin={setIsLogin} />}
+          </div>
+        </div>
+      </div>
+      <div className="absolute bottom-3 text-gray-500">
+        <span>Copyright © 2023-2024 </span>
+        <span className="cursor-pointer hover:opacity-50">zhicheng29</span>
       </div>
     </div>
   );

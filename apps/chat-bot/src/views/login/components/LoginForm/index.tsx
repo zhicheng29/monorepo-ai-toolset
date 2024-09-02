@@ -23,10 +23,10 @@ const LoginForm: React.FC<LoginFormProps> = ({ setIsLogin }) => {
 
   return (
     <Form name="basic" onFinish={onFinish} onFinishFailed={onFinishFailed} autoComplete="off">
-      <Form.Item<FieldType> name="username">
+      <Form.Item<FieldType> name="username" rules={[{ required: true }]}>
         <Input placeholder="用户名/邮箱/手机号" />
       </Form.Item>
-      <Form.Item<FieldType> name="password">
+      <Form.Item<FieldType> name="password" rules={[{ required: true }]}>
         <Input.Password placeholder="密码" />
       </Form.Item>
       <Form.Item>
