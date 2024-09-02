@@ -1,14 +1,19 @@
-import { Button } from "antd";
-import { useNavigate } from "react-router-dom";
+import bgURl from "@/assets/images/bg.svg";
 
 const Login: React.FC = () => {
-  const navigator = useNavigate();
-  const toHome = () => navigator("/");
-
   return (
-    <div>
-      <div>Login</div>
-      <Button onClick={toHome}>Home</Button>
+    <div className="h-dvh">
+      <div className="flex items-center justify-center">
+        <div className="left-bg"></div>
+        <div className="header"></div>
+        <div className="flex w-full h-full mx-auto">
+          <div className="basis-1/3">
+            <img src={bgURl} />
+          </div>
+          <div className="basis-1/3"></div>
+        </div>
+        <div className="copyright"></div>
+      </div>
     </div>
   );
 };

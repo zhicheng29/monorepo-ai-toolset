@@ -1,64 +1,79 @@
-/* 在线链接服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
 @font-face {
-  font-family: iconfont; /* Project id 4663353 */
+  font-family: "iconfont"; /* Project id 4663353 */
   src:
-    url("//at.alicdn.com/t/c/font_4663353_06v27ywmnsv5.woff2?t=1724758381404") format("woff2"),
-    url("//at.alicdn.com/t/c/font_4663353_06v27ywmnsv5.woff?t=1724758381404") format("woff"),
-    url("//at.alicdn.com/t/c/font_4663353_06v27ywmnsv5.ttf?t=1724758381404") format("truetype");
+    url("//at.alicdn.com/t/c/font_4663353_sz42cmivcxp.woff2?t=1725250678237") format("woff2"),
+    url("//at.alicdn.com/t/c/font_4663353_sz42cmivcxp.woff?t=1725250678237") format("woff"),
+    url("//at.alicdn.com/t/c/font_4663353_sz42cmivcxp.ttf?t=1725250678237") format("truetype");
 }
 
 .iconfont {
-  font-family: iconfont !important;
+  font-family: "iconfont" !important;
   font-size: 16px;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-add::before {
+.icon-lowcode:before {
+  content: "\ed2b";
+}
+
+.icon-aigc:before {
+  content: "\e813";
+}
+
+.icon-codeEditor:before {
+  content: "\e64e";
+}
+
+.icon-workflow:before {
+  content: "\e743";
+}
+
+.icon-add:before {
   content: "\e687";
 }
 
-.icon-down::before {
+.icon-down:before {
   content: "\e87e";
 }
 
-.icon-send::before {
+.icon-send:before {
   content: "\e857";
 }
 
-.icon-adjustments::before {
+.icon-adjustments:before {
   content: "\e60e";
 }
 
-.icon-ellipsis::before {
+.icon-ellipsis:before {
   content: "\e64f";
 }
 
-.icon-setting::before {
+.icon-setting:before {
   content: "\e660";
 }
 
-.icon-robot::before {
+.icon-robot:before {
   content: "\e9a3";
 }
 
-.icon-github::before {
+.icon-github:before {
   content: "\e72a";
 }
 
-.icon-sun::before {
+.icon-sun:before {
   content: "\e789";
 }
 
-.icon-right-arrow::before {
+.icon-right-arrow:before {
   content: "\e620";
 }
 
-.icon-moon::before {
+.icon-moon:before {
   content: "\e68a";
 }
 
-.icon-chatbot::before {
+.icon-chatbot:before {
   content: "\e600";
 }

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import FormHeader from "./components/FromHeader";
-import LoginForm from "./components/LoginFrom";
-import RegisterForm from "./components/RegisterFrom";
+import LoginForm from "./components/LoginForm";
+import RegisterForm from "./components/RegisterForm";
 const Login: React.FC = () => {
   const [isLogin, setIsLogin] = useState(true);
   return (
