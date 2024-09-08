@@ -10,7 +10,7 @@ import viteCompression from "vite-plugin-compression";
  * @param viteEnv
  */
 export const createVitePlugins = (viteEnv: ViteEnv): (PluginOption | PluginOption[])[] => {
-  const { VITE_GLOB_APP_TITLE, VITE_REPORT } = viteEnv;
+  const { VITE_APP_TITLE, VITE_REPORT } = viteEnv;
 
   return [
     react(),
@@ -21,7 +21,7 @@ export const createVitePlugins = (viteEnv: ViteEnv): (PluginOption | PluginOptio
     // Inject variable into html file
     createHtmlPlugin({
       inject: {
-        data: { title: VITE_GLOB_APP_TITLE }
+        data: { title: VITE_APP_TITLE }
       }
     }),
     // Whether to generate package preview, analyze dependent package size for optimization

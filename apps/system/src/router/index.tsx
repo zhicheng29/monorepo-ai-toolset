@@ -1,29 +1,40 @@
 import { useEffect, useState } from "react";
+import usePermission from "@/hooks/usePermission";
 import { createBrowserRouter, createHashRouter, RouterProvider as Router } from "react-router-dom";
+
+import { useAppSelector } from "@/redux";
+import { convertToDynamicRouterFormat } from "./helper/ConvertRouter";
 import { wrappedStaticRouter } from "./modules/staticRouter";
-import { convertRouter } from "./helper/ConvertRouter";
+
+// import NotFound from "@/components/Error/404.tsx";
 
 import type { RouteObject } from "react-router-dom";
 import type { RouteObjectType } from "./interface";
 
 const mode = import.meta.env.VITE_ROUTER_MODE;
 
-// todo 此处拦截未完成，authMenuList 在 RouterProvider 渲染之前必须有值，否则路由将命中失败
 // 1. 接口请求 2. redux
 const RouterProvider: React.FC = () => {
   const [routerList, setRouterList] = useState<RouteObjectType[]>(wrappedStaticRouter);
+  const { initPermission } = usePermission();
+
+  const token = useAppSelector(state => state.user.token);
+  const authMenuList = useAppSelector(state => state.auth.authMenuList);
 
   useEffect(() => {
-    console.log(routerList);
-    const dynamicRouter = convertRouter([]);
-    let allRouter = [...wrappedStaticRouter, ...dynamicRouter];
-    allRouter.forEach(item => item.path === "*" && (item.element = <>1111</>));
+    if (!authMenuList.length) {
+      initPermission(token);
+      return;
+    }
+    const dynamicRouter = convertToDynamicRouterFormat(authMenuList);
+    const allRouter = [...wrappedStaticRouter, ...dynamicRouter];
+
     setRouterList(allRouter);
-  }, []);
+  }, [authMenuList]);
 
   const routerMode = {
-    hash: () => createHashRouter(wrappedStaticRouter as RouteObject[]),
-    history: () => createBrowserRouter(wrappedStaticRouter as RouteObject[])
+    hash: () => createHashRouter(routerList as RouteObject[]),
+    history: () => createBrowserRouter(routerList as RouteObject[])
   };
 
   return <Router router={routerMode[mode]()} />;

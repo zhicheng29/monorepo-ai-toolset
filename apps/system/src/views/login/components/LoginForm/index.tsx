@@ -1,3 +1,6 @@
+import usePermission from "@/hooks/usePermission";
+import { useAppDispatch } from "@/redux";
+import { setToken } from "@/redux/modules/user";
 import type { FormProps } from "antd";
 import { Button, Form, Input } from "antd";
 import { useNavigate } from "react-router-dom";
@@ -12,9 +15,15 @@ type FieldType = {
 };
 
 const LoginForm: React.FC<LoginFormProps> = ({ setIsLogin }) => {
+  const dispatch = useAppDispatch();
   const navigator = useNavigate();
-  const onFinish: FormProps<FieldType>["onFinish"] = values => {
-    console.log("Success:", values);
+  const { initPermission } = usePermission();
+
+  const onFinish: FormProps<FieldType>["onFinish"] = async (formData: FieldType) => {
+    console.log("Success:", formData);
+    // todo 登录接口相关处理
+    dispatch(setToken("isaudgisadgj"));
+    await initPermission("isaudgisadgj");
     navigator("/");
   };
 

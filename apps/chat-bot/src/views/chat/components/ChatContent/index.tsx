@@ -3,7 +3,7 @@ import SvgIcon from "@repo/ui/components/SvgIcon";
 import { HOME_URL } from "@/constants/pageUrl";
 
 const ChatContent: React.FC = () => {
-  const title = import.meta.env.VITE_GLOB_APP_TITLE;
+  const title = import.meta.env.VITE_APP_TITLE;
 
   return (
     <div className="flex items-center justify-center px-4 pt-4 h-[calc(100%-8rem)] overflow-y-auto overflow-x-hidden">

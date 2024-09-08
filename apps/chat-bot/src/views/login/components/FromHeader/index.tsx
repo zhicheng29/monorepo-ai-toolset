@@ -4,7 +4,7 @@ import SvgIcon from "@repo/ui/components/SvgIcon";
 import { HOME_URL } from "@/constants/pageUrl";
 
 const FormHeader: React.FC = () => {
-  const title = import.meta.env.VITE_GLOB_APP_TITLE;
+  const title = import.meta.env.VITE_APP_TITLE;
 
   return (
     <Link to={HOME_URL} target="_blank">

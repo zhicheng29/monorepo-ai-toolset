@@ -22,7 +22,7 @@ const Login: React.FC = () => {
           <SvgIcon name="login_container_bg" iconStyle={{ width: "80%", height: "100%" }} />
         </div>
         <div className="flex items-center">
-          <div className="w-[32rem] py-10 px-20 min-w-80 rounded-3xl shadow-[0_0px_5px_1px_rgba(0,0,0,0.1)]">
+          <div className="w-[28rem] pt-10 px-10 min-w-80 rounded-3xl shadow-[0_0px_5px_1px_rgba(0,0,0,0.1)]">
             <FormHeader />
             {isLogin ? <LoginForm setIsLogin={setIsLogin} /> : <RegisterForm setIsLogin={setIsLogin} />}
           </div>

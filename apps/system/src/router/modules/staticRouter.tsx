@@ -1,21 +1,18 @@
 import { Navigate } from "react-router-dom";
+
+import RouterInterception from "../helper/RouterInterception";
+import { Loading } from "@/components/Loading";
+
 import Login from "@/views/login/index";
-import RouterGuard from "../helper/RouterGuard";
+
 import { HOME_URL, LOGIN_URL } from "@/constants/pageUrl";
 
 import type { RouteObjectType } from "@/router/interface";
-
-import Home from "@/views/home";
-import DataCentre from "@/views/dataCentre";
 
 export const staticRouter: RouteObjectType[] = [
   {
     path: "/",
     element: <Navigate to={HOME_URL} />
-  },
-  {
-    path: "/home",
-    element: <Home />
   },
   {
     path: LOGIN_URL,
@@ -25,18 +22,15 @@ export const staticRouter: RouteObjectType[] = [
     }
   },
   {
-    path: "/dataCentre",
-    element: <DataCentre />,
-    meta: {
-      title: "数据中心"
-    }
+    path: "*",
+    element: <Loading />
   }
 ];
 
 export const wrappedStaticRouter = staticRouter.map(item => {
   return {
     ...item,
-    element: <RouterGuard>{item.element}</RouterGuard>,
+    element: <RouterInterception>{item.element}</RouterInterception>,
     loader: () => {
       return { ...item.meta };
     }

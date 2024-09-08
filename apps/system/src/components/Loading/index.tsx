@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 import { Spin } from "antd";
 
 export const Loading: React.FC = () => {
@@ -9,11 +11,11 @@ export const Loading: React.FC = () => {
 };
 
 export const PageLoader: React.FC = () => {
-  // useEffect(() => {
-  //   NProgress.start();
-  //   return () => {
-  //     NProgress.done();
-  //   };
-  // }, []);
+  useEffect(() => {
+    // NProgress.start();
+    // return () => {
+    //   NProgress.done();
+    // };
+  }, []);
   return <Loading />;
 };
