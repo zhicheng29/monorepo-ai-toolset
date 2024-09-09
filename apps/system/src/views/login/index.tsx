@@ -13,7 +13,7 @@ const Login: React.FC = () => {
 
   return (
     <div className="h-dvh flex flex-1 items-center justify-center">
-      <img src={LoginBg} className="fixed bottom-0 left-0 w-4/5 z-[-1]"></img>
+      <img src={LoginBg} className="fixed bottom-0 left-0 w-4/5 z-[-1]" />
       <div className="absolute grid grid-cols-2 gap-4 top-3 right-12">
         <LoginHeader />
       </div>

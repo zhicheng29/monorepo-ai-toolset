@@ -4,13 +4,14 @@ import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import { thunk } from "redux-thunk";
 import storage from "redux-persist/lib/storage";
 
+import theme from "./modules/theme";
 import auth from "./modules/auth";
 import user from "./modules/user";
 
 import type { TypedUseSelectorHook } from "react-redux";
 import type { Middleware } from "@reduxjs/toolkit";
 
-const reducer = combineReducers({ user, auth });
+const reducer = combineReducers({ theme, user, auth });
 
 const persistConfig = {
   key: "redux-state",

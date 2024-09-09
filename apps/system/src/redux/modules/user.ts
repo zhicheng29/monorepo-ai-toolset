@@ -24,6 +24,6 @@ const userSlice = createSlice({
   }
 });
 
-// 到处 action
+// 导出 action
 export const { setToken, setUserInfo } = userSlice.actions;
 export default userSlice.reducer;

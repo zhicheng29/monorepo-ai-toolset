@@ -19,6 +19,6 @@ const authSlice = createSlice({
   }
 });
 
-// 到处 action
+// 导出 action
 export const { setAuthMenuList } = authSlice.actions;
 export default authSlice.reducer;

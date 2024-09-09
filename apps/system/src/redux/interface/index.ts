@@ -1,5 +1,14 @@
 import { RouteObjectType } from "@/router/interface";
 
+export type LanguageType = "zh" | "en" | null;
+
+export interface ThemeStateType {
+  isDark: boolean;
+  isCollapsed: boolean;
+  language: LanguageType;
+  themeColor: string;
+}
+
 export interface UserState {
   token: string;
   userInfo: { name: string };

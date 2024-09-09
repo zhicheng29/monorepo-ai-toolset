@@ -1,11 +1,15 @@
 import { useOutlet } from "react-router-dom";
+import { Card, Layout } from "antd";
 
-const LayoutMain: React.FC = () => {
+const { Content } = Layout;
+
+const MainContainer: React.FC = () => {
   const outlet = useOutlet();
   return (
-    <>
-      <div>{outlet}</div>
-    </>
+    <Content className="p-4">
+      <Card>{outlet}</Card>
+    </Content>
   );
 };
-export default LayoutMain;
+
+export default MainContainer;

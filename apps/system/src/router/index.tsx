@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
-import usePermission from "@/hooks/usePermission";
 import { createBrowserRouter, createHashRouter, RouterProvider as Router } from "react-router-dom";
 
 import { useAppSelector } from "@/redux";
+import usePermission from "@/hooks/usePermission";
+import useTheme from "@/hooks/useTheme";
+import useMessage from "@/hooks/useMessage";
 import { convertToDynamicRouterFormat } from "./helper/ConvertRouter";
 import { wrappedStaticRouter } from "./modules/staticRouter";
 
@@ -13,13 +15,14 @@ import type { RouteObjectType } from "./interface";
 
 const mode = import.meta.env.VITE_ROUTER_MODE;
 
-// 1. 接口请求 2. redux
 const RouterProvider: React.FC = () => {
-  const [routerList, setRouterList] = useState<RouteObjectType[]>(wrappedStaticRouter);
-  const { initPermission } = usePermission();
+  useTheme();
+  useMessage();
 
+  const { initPermission } = usePermission();
   const token = useAppSelector(state => state.user.token);
   const authMenuList = useAppSelector(state => state.auth.authMenuList);
+  const [routerList, setRouterList] = useState<RouteObjectType[]>(wrappedStaticRouter);
 
   useEffect(() => {
     if (!authMenuList.length) {
