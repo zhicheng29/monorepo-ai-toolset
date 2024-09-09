@@ -9,7 +9,7 @@ const authState: AuthState = {
 
 // 定义一个切片
 const authSlice = createSlice({
-  name: "system-auth",
+  name: "ai-toolset-auth",
   initialState: authState,
   reducers: {
     // 一般都是使用同步的 reducer

@@ -12,7 +12,7 @@ const userState: UserState = {
 
 // 定义一个切片
 const userSlice = createSlice({
-  name: "system-user",
+  name: "ai-toolset-user",
   initialState: userState,
   reducers: {
     setToken(state, { payload }: { payload: UserState["token"] }) {

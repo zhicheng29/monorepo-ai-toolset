@@ -6,7 +6,7 @@ const FormHeader: React.FC = () => {
   return (
     <div className="flex flex-col items-center mb-8">
       <div className="mb-2">
-        <SvgIcon name="system" iconStyle={{ width: "60px", height: "60px" }} />
+        <SvgIcon name="ai_toolset" iconStyle={{ width: "60px", height: "60px" }} />
       </div>
       <div className="text-4xl font-bold tracking-wide">{title}</div>
     </div>

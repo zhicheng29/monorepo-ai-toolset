@@ -8,6 +8,9 @@ const FooterContainer: React.FC = () => {
       <div className="text-gray-500">
         <span>Copyright © 2023-2024 </span>
         <span className="cursor-pointer hover:opacity-50">zhicheng29</span>
+        <a className=" ml-6 hover:text-gray-500 hover:opacity-50" href="https://beian.miit.gov.cn/" target="_blank">
+          赣ICP备2023002554号-2
+        </a>
       </div>
     </Footer>
   );
