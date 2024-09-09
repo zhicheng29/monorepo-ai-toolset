@@ -35,7 +35,7 @@ const App: React.FC = () => {
   return (
     <ConfigProvider
       locale={language === "zh" ? zhCN : enUS}
-      theme={{ algorithm: initAlgorithm(), cssVar: { prefix: "ai-toolset" }, hashed: false }}
+      theme={{ algorithm: initAlgorithm(), cssVar: { prefix: "suite" }, hashed: false }}
     >
       <AppProvider>
         <RouterProvider />

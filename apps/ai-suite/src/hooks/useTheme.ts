@@ -24,10 +24,10 @@ const useTheme = () => {
   const changePrimary = () => {
     const html = document.documentElement;
     const type: ThemeType = isDark ? "dark" : "light";
-    Object.entries(globalTheme[type]).forEach(([key, val]) => html.style.setProperty(`--ai-toolset-${key}`, val));
+    Object.entries(globalTheme[type]).forEach(([key, val]) => html.style.setProperty(`--suite-${key}`, val));
     Object.entries(token).forEach(([key, val]) => {
       if (preloadVarCss.includes(key)) {
-        html.style.setProperty(`--ai-toolset-${key}`, val);
+        html.style.setProperty(`--suite-${key}`, val);
       }
     });
   };

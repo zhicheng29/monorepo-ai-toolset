@@ -1,6 +1,6 @@
 export const globalTheme = {
   light: {
-    colorBgLayout: "#f0f2f5"
+    colorBgLayout: "#f2f6fe"
   },
   dark: {
     colorBgLayout: "0d0d0d"
