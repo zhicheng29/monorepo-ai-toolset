@@ -48,7 +48,7 @@ const SiderMenu: React.FC = () => {
 
   return (
     <Menu
-      className="border-0 h-full"
+      className="border-0 h-[calc(100% - 60px)]"
       mode="inline"
       onClick={onClick}
       theme={isDark ? "dark" : "light"}
