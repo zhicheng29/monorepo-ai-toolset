@@ -3,7 +3,7 @@ import { MenuUnfoldOutlined, MenuFoldOutlined } from "@ant-design/icons";
 import { useAppDispatch, useAppSelector } from "@/redux";
 import { setTheme } from "@/redux/modules/theme";
 
-const ToolLeft: React.FC = () => {
+const CollapsedIcon: React.FC = () => {
   const { isCollapsed } = useAppSelector(state => state.theme);
   const dispatch = useAppDispatch();
 
@@ -12,15 +12,17 @@ const ToolLeft: React.FC = () => {
   };
 
   return (
-    <div>
+    <div className="flex items-center">
       <Button
         type="text"
         size="large"
-        icon={isCollapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
+        icon={
+          isCollapsed ? <MenuUnfoldOutlined style={{ fontSize: "24px" }} /> : <MenuFoldOutlined style={{ fontSize: "24px" }} />
+        }
         onClick={() => changeCollapsed(!isCollapsed)}
       />
     </div>
   );
 };
 
-export default ToolLeft;
+export default CollapsedIcon;

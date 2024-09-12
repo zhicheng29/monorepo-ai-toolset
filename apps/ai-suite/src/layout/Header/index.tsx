@@ -1,14 +1,14 @@
 import { Layout } from "antd";
-import ToolLeft from "./components/ToolLeft";
-import ToolRight from "./components/ToolRight";
+import ToolBarLeft from "./components/ToolBarLeft";
+import ToolBarRight from "./components/ToolBarRight";
 
 const { Header } = Layout;
 
 const HeaderContainer: React.FC = () => {
   return (
-    <Header className="container-bg flex px-4 h-[60px] border-b justify-between items-center">
-      <ToolLeft />
-      <ToolRight />
+    <Header className="container-bg border-default flex px-4 h-[60px] border-b justify-between items-center">
+      <ToolBarLeft />
+      <ToolBarRight />
     </Header>
   );
 };

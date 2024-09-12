@@ -29,8 +29,13 @@ const SiderMenu: React.FC = () => {
   const handleMenuFormat = (menu: RouteObjectType[]): MenuItem[] => {
     return menu.map(item => {
       return item.children?.length
-        ? getItem(item.meta?.title, item.path, <i className={`iconfont ${item.meta!.icon!}`} />, handleMenuFormat(item.children))
-        : getItem(item.meta?.title, item.path, <i className={`iconfont ${item.meta!.icon!}`} />);
+        ? getItem(
+            item.meta?.title,
+            item.path,
+            <i className={`iconfont ${item.meta!.icon!} text-base`} />,
+            handleMenuFormat(item.children)
+          )
+        : getItem(item.meta?.title, item.path, <i className={`iconfont ${item.meta!.icon!} text-base`} />);
     });
   };
 

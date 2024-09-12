@@ -10,8 +10,6 @@ const config = {
   withCredentials: false
 };
 
-console.log(config);
-
 class RequestHttp {
   service: AxiosInstance;
   constructor(config: AxiosRequestConfig) {
