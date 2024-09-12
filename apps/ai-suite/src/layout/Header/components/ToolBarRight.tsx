@@ -4,7 +4,7 @@ import FullScreen from "./FullScreen";
 
 const ToolBarRight: React.FC = () => {
   return (
-    <div className="flex items-center">
+    <div className="flex items-center gap-2">
       <SwitchDark size="large" iconStyle={{ fontSize: "24px" }} />
       <NoticeButton />
       <FullScreen />

@@ -1,132 +1,131 @@
-/* 在线链接服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
 @font-face {
-  font-family: "iconfont"; /* Project id 4663353 */
+  font-family: iconfont; /* Project id 4663353 */
   src:
-    url("//at.alicdn.com/t/c/font_4663353_rzvyb7puuxn.woff2?t=1726134717652") format("woff2"),
-    url("//at.alicdn.com/t/c/font_4663353_rzvyb7puuxn.woff?t=1726134717652") format("woff"),
-    url("//at.alicdn.com/t/c/font_4663353_rzvyb7puuxn.ttf?t=1726134717652") format("truetype");
+    url("//at.alicdn.com/t/c/font_4663353_a5j7n41ecjv.woff2?t=1726158573877") format("woff2"),
+    url("//at.alicdn.com/t/c/font_4663353_a5j7n41ecjv.woff?t=1726158573877") format("woff"),
+    url("//at.alicdn.com/t/c/font_4663353_a5j7n41ecjv.ttf?t=1726158573877") format("truetype");
 }
 
 .iconfont {
-  font-family: "iconfont" !important;
+  font-family: iconfont !important;
   font-size: 16px;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-notice:before {
-  content: "\e610";
+.icon-fullScreen::before {
+  content: "\e6ea";
 }
 
-.icon-permission:before {
+.icon-exitFullScreen::before {
+  content: "\e63c";
+}
+
+.icon-notice::before {
+  content: "\e7ce";
+}
+
+.icon-permission::before {
   content: "\e60a";
 }
 
-.icon-projectInfo:before {
+.icon-projectInfo::before {
   content: "\e615";
 }
 
-.icon-productfeatures:before {
+.icon-productfeatures::before {
   content: "\e6f4";
 }
 
-.icon-features:before {
+.icon-features::before {
   content: "\e74d";
 }
 
-.icon-about:before {
+.icon-about::before {
   content: "\e677";
 }
 
-.icon-dataCentre:before {
+.icon-dataCentre::before {
   content: "\e70d";
 }
 
-.icon-projectManagement:before {
+.icon-projectManagement::before {
   content: "\e64a";
 }
 
-.icon-home:before {
+.icon-home::before {
   content: "\e628";
 }
 
-.icon-search:before {
+.icon-search::before {
   content: "\e72f";
 }
 
-.icon-fullScreen:before {
-  content: "\e670";
-}
-
-.icon-exitFullScreen:before {
-  content: "\e612";
-}
-
-.icon-translate:before {
+.icon-translate::before {
   content: "\e7de";
 }
 
-.icon-lowCode:before {
+.icon-lowCode::before {
   content: "\ed2b";
 }
 
-.icon-aigc:before {
+.icon-aigc::before {
   content: "\e813";
 }
 
-.icon-aigcDark:before {
+.icon-aigcDark::before {
   content: "\ed2c";
 }
 
-.icon-codeEditor:before {
+.icon-codeEditor::before {
   content: "\e64e";
 }
 
-.icon-workFlow:before {
+.icon-workFlow::before {
   content: "\e743";
 }
 
-.icon-add:before {
+.icon-add::before {
   content: "\e687";
 }
 
-.icon-down:before {
+.icon-down::before {
   content: "\e87e";
 }
 
-.icon-send:before {
+.icon-send::before {
   content: "\e857";
 }
 
-.icon-adjustments:before {
+.icon-adjustments::before {
   content: "\e60e";
 }
 
-.icon-ellipsis:before {
+.icon-ellipsis::before {
   content: "\e64f";
 }
 
-.icon-setting:before {
+.icon-setting::before {
   content: "\e660";
 }
 
-.icon-chatBot:before {
+.icon-chatBot::before {
   content: "\e9a3";
 }
 
-.icon-github:before {
+.icon-github::before {
   content: "\e72a";
 }
 
-.icon-sun:before {
+.icon-sun::before {
   content: "\e789";
 }
 
-.icon-right-arrow:before {
+.icon-right-arrow::before {
   content: "\e620";
 }
 
-.icon-moon:before {
+.icon-moon::before {
   content: "\e68a";
 }
