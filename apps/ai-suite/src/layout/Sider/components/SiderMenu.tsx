@@ -13,7 +13,6 @@ const SiderMenu: React.FC = () => {
   const navigate = useNavigate();
   const { isDark } = useAppSelector(state => state.theme);
   const menuList = useAppSelector(state => state.auth.authMenuList);
-
   const [selectKeys, setSelectKeys] = useState<string[]>([]);
 
   const getItem = (
