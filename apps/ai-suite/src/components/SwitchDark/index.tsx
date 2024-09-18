@@ -5,12 +5,12 @@ import { Button } from "antd";
 
 import { MouseEventHandler, type CSSProperties } from "react";
 
-type LanguageSelectPropType = {
+type SwitchDarkPropType = {
   size?: "large" | "small" | "middle";
   iconStyle?: CSSProperties;
 };
 
-const SwitchDark: React.FC<LanguageSelectPropType> = ({ size = "middle", iconStyle }) => {
+const SwitchDarkCom: React.FC<SwitchDarkPropType> = ({ size = "middle", iconStyle }) => {
   const dispatch = useAppDispatch();
   const { isDark } = useAppSelector(state => state.theme);
 
@@ -62,4 +62,4 @@ const SwitchDark: React.FC<LanguageSelectPropType> = ({ size = "middle", iconSty
   );
 };
 
-export default SwitchDark;
+export default SwitchDarkCom;

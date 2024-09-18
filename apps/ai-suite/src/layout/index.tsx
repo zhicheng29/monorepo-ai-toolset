@@ -10,7 +10,7 @@ const LayoutContainer: React.FC = () => {
   return (
     <Layout className="h-dvh">
       <SiderContainer />
-      <Layout>
+      <Layout className="overflow-x-hidden">
         <HeaderContainer />
         <TabdsContainer />
         <MainContainer />

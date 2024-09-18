@@ -1,7 +1,7 @@
 import { useLayoutEffect, useState } from "react";
 import { Button } from "antd";
 
-const FullScreen: React.FC = () => {
+const FullScreenIcon: React.FC = () => {
   const [fullScreen, setFullScreen] = useState(false);
 
   const handleFullScreen = () => {
@@ -35,4 +35,4 @@ const FullScreen: React.FC = () => {
   );
 };
 
-export default FullScreen;
+export default FullScreenIcon;

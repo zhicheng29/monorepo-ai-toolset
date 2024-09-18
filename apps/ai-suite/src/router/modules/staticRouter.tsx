@@ -2,7 +2,6 @@ import { Navigate } from "react-router-dom";
 
 import RouterInterception from "../helper/RouterInterception";
 import { Loading } from "@/components/Loading";
-
 import Login from "@/views/login/index";
 
 import { HOME_URL, LOGIN_URL } from "@/constants/pageUrl";

@@ -3,12 +3,12 @@ import { Button, Dropdown } from "antd";
 import type { MenuProps } from "antd";
 import { CSSProperties, useState } from "react";
 
-type LanguageSelectPropType = {
+type LanguagePropType = {
   size?: "large" | "small" | "middle";
   iconStyle?: CSSProperties;
 };
 
-const LanguageSelect: React.FC<LanguageSelectPropType> = ({ size = "middle", iconStyle }) => {
+const LanguageCom: React.FC<LanguagePropType> = ({ size = "middle", iconStyle }) => {
   const [language, setLanguage] = useState("zh");
 
   const changeLanguage: MenuProps["onClick"] = val => {
@@ -32,4 +32,4 @@ const LanguageSelect: React.FC<LanguageSelectPropType> = ({ size = "middle", ico
   );
 };
 
-export default LanguageSelect;
+export default LanguageCom;
