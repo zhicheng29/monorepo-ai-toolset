@@ -8,7 +8,7 @@ const { Content } = Layout;
 const MainContainer: React.FC = () => {
   const outlet = useOutlet();
   return (
-    <Content className="p-4 main-container">
+    <Content className="p-4 main-container overflow-auto">
       <Card>{outlet}</Card>
     </Content>
   );

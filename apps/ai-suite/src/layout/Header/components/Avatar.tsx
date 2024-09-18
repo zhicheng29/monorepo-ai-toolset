@@ -31,7 +31,11 @@ const AvatarCom: React.FC = () => {
   ];
   return (
     <Dropdown menu={{ items }} arrow>
-      <Avatar className="cursor-pointer ml-2" size={40} src="https://api.dicebear.com/7.x/miniavs/svg?seed=1" />
+      <Avatar
+        className="cursor-pointer ml-2"
+        size={36}
+        src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png?undefined"
+      />
     </Dropdown>
   );
 };
