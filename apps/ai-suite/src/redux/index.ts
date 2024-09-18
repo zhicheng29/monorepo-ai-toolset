@@ -7,11 +7,12 @@ import storage from "redux-persist/lib/storage";
 import theme from "./modules/theme";
 import auth from "./modules/auth";
 import user from "./modules/user";
+import tab from "@/redux/modules/tabs";
 
 import type { TypedUseSelectorHook } from "react-redux";
 import type { Middleware } from "@reduxjs/toolkit";
 
-const reducer = combineReducers({ theme, user, auth });
+const reducer = combineReducers({ theme, user, auth, tab });
 
 const persistConfig = {
   key: "redux-state",

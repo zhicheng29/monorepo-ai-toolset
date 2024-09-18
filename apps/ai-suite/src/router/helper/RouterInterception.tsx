@@ -15,6 +15,8 @@ const RouteInterception: React.FC<RouteInterceptionProps> = props => {
   const navigate = useNavigate();
   const { pathname } = useLocation();
 
+  window.$navigate = navigate;
+
   const token = useAppSelector((state: RootState) => state.user.token);
   const authMenuList = useAppSelector((state: RootState) => state.auth.authMenuList);
 

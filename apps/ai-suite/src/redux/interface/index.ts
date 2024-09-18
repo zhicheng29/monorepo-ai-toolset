@@ -17,3 +17,11 @@ export interface UserState {
 export interface AuthState {
   authMenuList: RouteObjectType[];
 }
+
+// tab
+export interface TabPropType {
+  title: string;
+  icon: string;
+  path: string;
+  closable: boolean;
+}
