@@ -106,21 +106,19 @@ const TabsContainer: React.FC = () => {
       activeKey={pathname}
       onEdit={onEdit}
       onChange={onChange}
-      {...{
-        renderTabBar: (tabBarProps, DefaultTabBar) => (
-          <DndContext sensors={[sensor]} onDragEnd={onDragEnd}>
-            <SortableContext items={tabItems.map(i => i.key)} strategy={horizontalListSortingStrategy}>
-              <DefaultTabBar {...tabBarProps}>
-                {node => (
-                  <DraggableTabNode {...node.props} key={node.key}>
-                    {node}
-                  </DraggableTabNode>
-                )}
-              </DefaultTabBar>
-            </SortableContext>
-          </DndContext>
-        )
-      }}
+      renderTabBar={(tabBarProps, DefaultTabBar) => (
+        <DndContext sensors={[sensor]} onDragEnd={onDragEnd}>
+          <SortableContext items={tabItems.map(i => i.key)} strategy={horizontalListSortingStrategy}>
+            <DefaultTabBar {...tabBarProps}>
+              {node => (
+                <DraggableTabNode {...node.props} key={node.key}>
+                  {node}
+                </DraggableTabNode>
+              )}
+            </DefaultTabBar>
+          </SortableContext>
+        </DndContext>
+      )}
     />
   );
 };
