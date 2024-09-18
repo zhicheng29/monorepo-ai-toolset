@@ -1,5 +1,6 @@
 import usePermission from "@/hooks/usePermission";
 import { useAppDispatch } from "@/redux";
+import { setTabsList } from "@/redux/modules/tabs";
 import { setToken } from "@/redux/modules/user";
 import type { FormProps } from "antd";
 import { Button, Form, Input } from "antd";
@@ -23,6 +24,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ setIsLogin }) => {
     console.log("Success:", formData);
     // todo 登录接口相关处理
     dispatch(setToken("isaudgisadgj"));
+    dispatch(setTabsList([]));
     await initPermission("isaudgisadgj");
     navigator("/");
   };
