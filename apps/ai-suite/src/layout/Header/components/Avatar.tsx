@@ -29,6 +29,7 @@ const AvatarCom: React.FC = () => {
       onClick: () => {}
     }
   ];
+
   return (
     <Dropdown menu={{ items }} arrow>
       <Avatar
