@@ -1,10 +1,9 @@
 import React, { useEffect } from "react";
 
+import RouterProvider from "@/router";
 import { useAppDispatch, useAppSelector } from "@/redux";
 import { setTheme } from "@/redux/modules/theme";
 import { getSystemLanguage } from "@/utils";
-
-import RouterProvider from "@/router";
 
 import { ConfigProvider, theme, App as AppProvider } from "antd";
 import enUS from "antd/locale/en_US";
