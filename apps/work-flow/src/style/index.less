@@ -1,8 +1,28 @@
-@import url("@repo/ui/components/Iconfont/iconfont.css");
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* global */
+
+html,
+body,
+#root,
+.ant-app {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #ffffff;
+  &.dark {
+    background-color: black;
+  }
+}
 
 /* scroll bar */
 
@@ -12,10 +32,34 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #eeeeee;
+  background-color: rgb(127 127 127);
   border-radius: 20px;
 }
 
 ::-webkit-scrollbar-corner {
   background-color: transparent;
+}
+
+/* theme transition */
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  mix-blend-mode: normal;
+  animation: none;
+}
+
+.dark::view-transition-old(root) {
+  z-index: 1;
+}
+
+.dark::view-transition-new(root) {
+  z-index: 999;
+}
+
+::view-transition-old(root) {
+  z-index: 999;
+}
+
+::view-transition-new(root) {
+  z-index: 1;
 }

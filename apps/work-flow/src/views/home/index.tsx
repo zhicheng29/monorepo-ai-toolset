@@ -1,16 +1,5 @@
-import { Button } from "antd";
-import { useNavigate } from "react-router-dom";
-
 const Home: React.FC = () => {
-  const navigator = useNavigate();
-  const toLogin = () => navigator("/login");
-
-  return (
-    <div>
-      <div>Home</div>
-      <Button onClick={toLogin}>Login</Button>
-    </div>
-  );
+  return <div className="bg-[#f7f7fa] h-full w-full flex">home</div>;
 };
 
 export default Home;
