@@ -1,0 +1,102 @@
+@import url("@repo/ui/components/Iconfont/iconfont.css");
+@import url("@/assets/fonts/index.less");
+@import url("./common.less");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* global */
+
+html,
+body,
+#root,
+.ant-app {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #ffffff;
+  &.dark {
+    background-color: black;
+  }
+}
+
+/* scroll bar */
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(127 127 127);
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+/* theme transition */
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  mix-blend-mode: normal;
+  animation: none;
+}
+
+.dark::view-transition-old(root) {
+  z-index: 1;
+}
+
+.dark::view-transition-new(root) {
+  z-index: 999;
+}
+
+::view-transition-old(root) {
+  z-index: 999;
+}
+
+::view-transition-new(root) {
+  z-index: 1;
+}
+
+/* nprogress */
+
+#nprogress .bar {
+  background: var(--backend-colorPrimary) !important;
+}
+
+#nprogress .spinner-icon {
+  border-top-color: var(--backend-colorPrimary) !important;
+  border-left-color: var(--backend-colorPrimary) !important;
+}
+
+#nprogress .peg {
+  box-shadow:
+    0 0 10px var(--backend-colorPrimary),
+    0 0 5px var(--backend-colorPrimary) !important;
+}
+
+/* antd drawer */
+
+.ant-drawer-content {
+  .ant-drawer-header {
+    padding: 15px 10px;
+  }
+}
+
+/* antd tabs dropdown */
+
+.ant-tabs-dropdown {
+  .ant-tabs-dropdown-menu-item i {
+    margin-right: 5px;
+  }
+}

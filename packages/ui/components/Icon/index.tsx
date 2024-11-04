@@ -14,5 +14,5 @@ export const Icon: React.FC<IconProps> = React.memo(({ name, className }) => {
 });
 
 export const IconFont = createFromIconfontCN({
-  scriptUrl: ["//at.alicdn.com/t/c/font_4663353_a5j7n41ecjv.js"]
+  scriptUrl: ["//at.alicdn.com/t/c/font_4663353_dvmgg5c8qd.js"]
 });

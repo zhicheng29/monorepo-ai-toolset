@@ -1,5 +1,5 @@
 {
-  "name": "monorepo-ai-toolset",
+  "name": "monorepo-toolset",
   "private": true,
   "scripts": {
     "build": "turbo build",
